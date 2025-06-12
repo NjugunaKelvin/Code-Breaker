@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Decoder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img1.jpeg   " type="image/x-icon">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🔐 <span class="glow">CODE BREAKER</span> 🔐</h1>
+        <p class="subtitle">Decrypt the secret sequence</p>
+
+        <div class="difficulty-selector">
+            <h3>Select Difficulty:</h3>
+            <div class="difficulty-options">
+                <button class="difficulty-btn active" data-difficulty="easy">Easy (4 digits)</button>
+                <button class="difficulty-btn" data-difficulty="medium">Medium (5 digits)</button>
+                <button class="difficulty-btn" data-difficulty="hard">Hard (6 digits)</button>
+            </div>
+        </div>
+
+        <div class="game-board">
+            <div class="feedback" id="feedback">
+                <!-- Guesses appear here -->
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input 
+                type="number" 
+                id="guess-input" 
+                placeholder="Enter your guess..." 
+                min="1023" 
+                max="999999"
+            >
+            <button id="submit-guess">DECRYPT</button>
+        </div>
+
+        <div class="game-info">
+            <p>Attempts left: <span id="attempts">10</span></p>
+            <p>Difficulty: <span id="current-difficulty">Easy</span></p>
+        </div>
+
+        <div class="hint-section">
+            <button id="hint-btn">💡 Get Hint</button>
+            <span id="hint-text"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
